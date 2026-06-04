@@ -1,0 +1,15 @@
+# 安装包与构建产物不进 Git（仅通过 GitHub Releases 分发）
+release/
+dist/
+*.exe
+*.dmg
+*.AppImage
+*.tar.gz
+*.zip
+*.blockmap
+latest*.yml
+node_modules/
+
+# 含 Token 的本地配置
+weflow-export-schedule.config.json
+weflow-sop.config.json

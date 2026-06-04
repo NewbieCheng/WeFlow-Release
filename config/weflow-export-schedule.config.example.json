@@ -1,0 +1,49 @@
+{
+  "apiBaseUrl": "http://127.0.0.1:5031",
+  "apiToken": "",
+  "defaultOutputDir": "exports/scheduled",
+  "pageSize": 500,
+  "requestTimeoutMs": 60000,
+  "keepSystemMessages": false,
+  "tasks": [
+    {
+      "id": "daily-project-group",
+      "enabled": true,
+      "name": "每日导出项目群（昨天）",
+      "group": "项目群",
+      "dateMode": "yesterday",
+      "format": "markdown",
+      "exportMedia": {
+        "image": true,
+        "voice": false,
+        "video": false,
+        "emoji": false
+      },
+      "outputDir": "exports/scheduled/项目群"
+    },
+    {
+      "id": "once-20260115",
+      "enabled": false,
+      "name": "指定日期单次导出",
+      "talker": "xxx@chatroom",
+      "dateMode": "specific",
+      "date": "20260115",
+      "format": "chatlab"
+    },
+    {
+      "id": "last7-project-group",
+      "enabled": false,
+      "name": "最近7天项目群",
+      "group": "项目群",
+      "dateMode": "lastNDays",
+      "lastNDays": 7,
+      "format": "json",
+      "exportMedia": {
+        "image": false,
+        "voice": false,
+        "video": false,
+        "emoji": false
+      }
+    }
+  ]
+}
